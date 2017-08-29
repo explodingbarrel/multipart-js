@@ -1,7 +1,7 @@
 
 var multipart = require("../lib/multipart")
   , assert = require("assert")
-  , sys = require("sys")
+  , sys = require("util")
   , fixture = require("./fixture")
   , testPart = function (expect, part) {
       sys.debug("test part: "+sys.inspect(expect));

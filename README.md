@@ -1,5 +1,26 @@
 # multipart-js
 
+https://github.com/isaacs/multipart-js
+
+TPC: we should probably stop using this module - there are lots of legitimate alternatives.  This module hasn't been updated in six years and the test directory has the following in its last commit:
+"support for nested params. Tests arent passing, some issue with boundaries"
+
+TPC: here is the error when we run the tests locally using the now committed ./scripts/runtest.sh
+
+Error: Malformed: boundary not found at start of message
+    at error (/Users/tcassidy/kbm-devspc/git/multipart-js/lib/utils.js:6:19)
+    at Parser.write (/Users/tcassidy/kbm-devspc/git/multipart-js/lib/parse.js:75:13)
+    at Writer.writer.onData (/Users/tcassidy/kbm-devspc/git/multipart-js/test/write.js:116:10)
+    at emit (/Users/tcassidy/kbm-devspc/git/multipart-js/lib/utils.js:11:31)
+    at Writer.partBegin (/Users/tcassidy/kbm-devspc/git/multipart-js/lib/write.js:127:3)
+    at Object.<anonymous> (/Users/tcassidy/kbm-devspc/git/multipart-js/test/write.js:125:8)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+
+
+
 A JavaScript library for parsing and writing multipart messages.
 
 ## Current State

@@ -1,6 +1,6 @@
 var multipart = require("../lib/multipart")
   , assert = require("assert")
-  , sys = require("sys")
+  , sys = require("util")
   , fixture = require("./fixture")
   , messages = fixture.messages
   , aSimpleMessage = fixture.aSimpleMessage
